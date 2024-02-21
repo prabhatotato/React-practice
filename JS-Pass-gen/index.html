@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500'>
+        <h1 class='text-white text-center my-3'>Password generator</h1>
+        <div class="flex shadow rounded-lg overflow-hidden mb-4">
+            <input
+                style="color: orangered;"
+                type="text"
+                id="pwd-display"
+                class="outline-none w-full py-1 px-3"
+                placeholder="Password"
+                readOnly
+                
+            />
+  
+            <button
+            id="cpy-btn"
+            class='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'
+            >copy</button>
+          
+        </div>
+
+        <div class='flex text-sm gap-x-2'>
+            <div class='flex items-center gap-x-1'>
+                <input type='range'
+                id="slider"
+                min = "6"
+                max="100"
+                className='cursor-pointer'
+                
+                />
+                <label style="color: orange;" id="len-label"> Length: </label>
+            </div>
+
+            <div class='flex items-center gap-x-1'>
+                <input
+                  type='checkbox'
+                  checked
+                  id = "numberInput"
+                  
+                />
+                <label 
+                style="color: orange;"
+                htmlFor='numberInput' 
+                >
+                  Numbers
+                </label>
+              </div>
+
+              <div class='flex items-center gap-x-1'>
+                <input
+                  type='checkbox'
+                  defaultChecked = 'false'
+                  id = "charInput"
+                  
+                />
+                <label
+                style="color: orange;"
+                htmlFor='charInput' 
+                >
+                  Characters
+                </label>
+              </div>
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
